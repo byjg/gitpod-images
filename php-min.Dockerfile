@@ -1,29 +1,31 @@
 FROM gitpod/workspace-full:latest
 
-RUN sudo update-alternatives --set php /usr/bin/php8.2
+ENV PHP_VERSION=8.2
+
+RUN sudo update-alternatives --set php /usr/bin/php${PHP_VERSION}
 
 RUN sudo install-packages \
-    php8.2-dev \
-    php8.2-cli \
-    php8.2-curl \
-    php8.2-dba \
-    php8.2-dev \
-    php8.2-gd \
-    php8.2-igbinary \
-    php8.2-imagick \
-    php8.2-gd \
-    php8.2-mbstring \
-    php8.2-memcached \
-    php8.2-mongodb \
-    php8.2-msgpack \
-    php8.2-mysql \
-    php8.2-opcache \
-    php8.2-pgsql \
-    php8.2-phpdbg \
-    php8.2-readline \
-    php8.2-redis \
-    php8.2-soap \
-    php8.2-sqlite3 \
-    php8.2-xdebug \
-    php8.2-xml
+    php${PHP_VERSION}-dev \
+    php${PHP_VERSION}-cli \
+    php${PHP_VERSION}-curl \
+    php${PHP_VERSION}-dba \
+    php${PHP_VERSION}-dev \
+    php${PHP_VERSION}-gd \
+    php${PHP_VERSION}-igbinary \
+    php${PHP_VERSION}-imagick \
+    php${PHP_VERSION}-gd \
+    php${PHP_VERSION}-mbstring \
+    php${PHP_VERSION}-memcached \
+    php${PHP_VERSION}-mongodb \
+    php${PHP_VERSION}-msgpack \
+    php${PHP_VERSION}-mysql \
+    php${PHP_VERSION}-opcache \
+    php${PHP_VERSION}-pgsql \
+    php${PHP_VERSION}-phpdbg \
+    php${PHP_VERSION}-readline \
+    php${PHP_VERSION}-redis \
+    php${PHP_VERSION}-soap \
+    php${PHP_VERSION}-sqlite3 \
+    php${PHP_VERSION}-xdebug \
+    php${PHP_VERSION}-xml
 
