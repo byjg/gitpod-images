@@ -48,7 +48,6 @@ RUN wget https://download.oracle.com/otn_software/linux/instantclient/2340000/in
     printf "instantclient,/usr/local/instantclient\n" | sudo pecl -d php_suffix=${PHP_VERSION} install oci8 && \
     printf "; priority=20\nextension=oci8.so\n" | sudo tee /etc/php/${PHP_VERSION}/mods-available/oci8.ini && \
     sudo phpenmod -v php${PHP_VERSION} oci8 && \
-    sudo ln -s /etc/php/${PHP_VERSION}/mods-available/oci8.ini /etc/php/${PHP_VERSION}/cli/conf.d/20-oci8.ini \
     rm -f instantclient-* && \
     rm -rf META-INF
 
