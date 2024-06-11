@@ -28,6 +28,7 @@ RUN sudo install-packages \
     php${PHP_VERSION}-sqlite3 \
     php${PHP_VERSION}-xdebug \
     php${PHP_VERSION}-xml \
+    php${PHP_VERSION}-sybase \
     unixodbc-dev libaio1
 
 RUN sudo pecl channel-update pecl.php.net && \
