@@ -36,7 +36,11 @@ RUN sudo pecl channel-update pecl.php.net && \
     printf "; priority=20\nextension=sqlsrv.so\n" | sudo tee /etc/php/${PHP_VERSION}/mods-available/sqlsrv.ini && \
     printf "; priority=30\nextension=pdo_sqlsrv.so\n" | sudo tee /etc/php/${PHP_VERSION}/mods-available/pdo_sqlsrv.ini && \
     sudo phpenmod -v php${PHP_VERSION} sqlsrv && \
-    sudo phpenmod -v php${PHP_VERSION} pdo_sqlsrv
+    sudo phpenmod -v php${PHP_VERSION} pdo_sqlsrv && \
+    curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc && \
+    curl https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list && \
+    sudo ACCEPT_EULA=Y install-packages -y unixodbc msodbcsql18 mssql-tools18 && \
+    echo 'export PATH="$PATH:/opt/mssql-tools18/bin"' >> ~/.bashrc
 
 RUN wget https://download.oracle.com/otn_software/linux/instantclient/2340000/instantclient-basic-linux.x64-23.4.0.24.05.zip && \
     wget https://download.oracle.com/otn_software/linux/instantclient/2340000/instantclient-sdk-linux.x64-23.4.0.24.05.zip && \
