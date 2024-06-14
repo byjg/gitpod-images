@@ -1,0 +1,33 @@
+image: byjg/gitpod-image:full
+
+additionalRepositories:
+  - url: https://github.com/byjg/php-uri
+  - url: https://github.com/byjg/php-xmlutil
+  - url: https://github.com/byjg/php-serializer
+  - url: https://github.com/byjg/php-anydataset
+  - url: https://github.com/byjg/php-anydataset-array
+  - url: https://github.com/byjg/php-anydatasetjson
+  - url: https://github.com/byjg/php-anydataset-text
+  - url: https://github.com/byjg/php-anydataset-xml
+  - url: https://github.com/byjg/php-anydataset-db
+  - url: https://github.com/byjg/php-anydataset-nosql
+  - url: https://github.com/byjg/php-cache-engine
+  - url: https://github.com/byjg/php-config
+  - url: https://github.com/byjg/php-jwt-wrapper
+  - url: https://github.com/byjg/php-convert
+  - url: https://github.com/byjg/php-webrequest
+  - url: https://github.com/byjg/php-message-queue-client
+  - url: https://github.com/byjg/php-redis-queue-client
+  - url: https://github.com/byjg/php-rabbitmq-queue-client
+  - url: https://github.com/byjg/php-swagger-test
+  - url: https://github.com/byjg/php-mailwrapper
+    
+tasks:
+  - name: php-uri
+  # change working directory as per configured in `checkoutLocation`
+  # which is configured above as `/workspaces/backend`
+    before: |
+       cd ../php-uri
+    init: |
+       composer update
+      
