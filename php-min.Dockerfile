@@ -1,6 +1,8 @@
 FROM gitpod/workspace-full:latest
 
-ENV PHP_VERSION=8.2
+ARG PHP_VERSION=8.2
+
+ENV PHP_VERSION=${PHP_VERSION}
 
 RUN sudo update-alternatives --set php /usr/bin/php${PHP_VERSION}
 
