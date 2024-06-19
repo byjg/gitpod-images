@@ -24,10 +24,122 @@ additionalRepositories:
     
 tasks:
   - name: php-uri
-  # change working directory as per configured in `checkoutLocation`
-  # which is configured above as `/workspaces/backend`
     before: |
        cd ../php-uri
     init: |
        composer update
       
+  - name: php-xmlutil
+    before: |
+      cd ../php-xmlutil
+    init: |
+      composer update
+
+  - name: php-serializer
+    before: |
+      cd ../php-serializer
+    init: |
+      composer update
+
+  - name: php-anydataset
+    before: |
+      cd ../php-anydataset
+    init: |
+      composer update
+
+  - name: php-anydataset-array
+    before: |
+      cd ../php-anydataset-array
+    init: |
+      composer update
+
+  - name: php-anydataset-json
+    before: |
+      cd ../php-anydataset-json
+    init: |
+      composer update
+
+  - name: php-anydataset-text
+    before: |
+      cd ../php-anydataset-text
+    init: |
+      composer update
+
+  - name: php-anydataset-xml
+    before: |
+      cd ../php-anydataset-xml
+    init: |
+      composer update
+
+  - name: php-anydataset-db
+    before: |
+      cd ../php-anydataset-db
+    init: |
+      composer update
+
+  - name: php-anydataset-nosql
+    before: |
+      cd ../php-anydataset-nosql
+    init: |
+      composer update
+
+  - name: php-cache-engine
+    before: |
+      cd ../php-cache-engine
+    init: |
+      composer update
+
+  - name: php-config
+    before: |
+      cd ../php-config
+    init: |
+      composer update
+
+  - name: php-jwt-wrapper
+    before: |
+      cd ../php-jwt-wrapper
+    init: |
+      composer update
+
+  - name: php-convert
+    before: |
+      cd ../php-convert
+    init: |
+      composer update
+
+  - name: php-webrequest
+    before: |
+      cd ../php-webrequest
+    init: |
+      composer update
+
+  - name: php-message-queue-client
+    before: |
+      cd ../php-message-queue-client
+    init: |
+      composer update
+
+  - name: php-redis-queue-client
+    before: |
+      cd ../php-redis-queue-client
+    init: |
+      composer update
+
+  - name: php-rabbitmq-client
+    before: |
+      cd ../php-rabbitmq-client
+    init: |
+      composer update
+
+  - name: php-swagger-test
+    before: |
+      cd ../php-swagger-test
+    init: |
+      composer update
+
+  - name: php-mailwrapper
+    before: |
+      cd ../php-mailwrapper
+    init: |
+      composer update
+
