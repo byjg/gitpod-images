@@ -6,7 +6,7 @@ additionalRepositories:
   - url: https://github.com/byjg/php-serializer
   - url: https://github.com/byjg/php-anydataset
   - url: https://github.com/byjg/php-anydataset-array
-  - url: https://github.com/byjg/php-anydatasetjson
+  - url: https://github.com/byjg/php-anydataset-json
   - url: https://github.com/byjg/php-anydataset-text
   - url: https://github.com/byjg/php-anydataset-xml
   - url: https://github.com/byjg/php-anydataset-db
@@ -18,7 +18,7 @@ additionalRepositories:
   - url: https://github.com/byjg/php-webrequest
   - url: https://github.com/byjg/php-message-queue-client
   - url: https://github.com/byjg/php-redis-queue-client
-  - url: https://github.com/byjg/php-rabbitmq-queue-client
+  - url: https://github.com/byjg/php-rabbitmq-client
   - url: https://github.com/byjg/php-swagger-test
   - url: https://github.com/byjg/php-mailwrapper
     
